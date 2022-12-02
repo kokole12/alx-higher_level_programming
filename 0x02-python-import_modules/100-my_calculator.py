@@ -11,6 +11,6 @@ if __name__ == "__main__":
     if sys.arg[2] not in list(ops.kys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-    a = sys.arg[1]
-    b = sys.arg[3]
+    a = int(sys.arg[1])
+    b = int(sys.arg[3])
     print("{} {} {} = {}".format(a, sys.arg[2], b, ops[sys.arg[2]](a, b)))
