@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-def unique_add(my_list=[]):
-    num = 0
-    for i in set(my_list):
-        num += i
-    return num
+def uniq_add(my_list=[]):
+    number = 0
+    for element in set(my_list):
+        number += element
+    return number
