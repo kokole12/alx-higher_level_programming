@@ -3,6 +3,6 @@
 """Defines a square """
 
 
-class square:
+class Square:
     """Does nothing"""
     pass
