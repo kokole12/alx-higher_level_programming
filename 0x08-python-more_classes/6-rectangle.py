@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Declears a rectanle class"""
 
+
 class Rectangle:
     """ initializing the values for the rectangle"""
     number_of_instances = 0
@@ -17,12 +18,12 @@ class Rectangle:
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-    
+
     @property
     def width(self):
         """ retrieves the width of the rectangle"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """ Sets the value for the width"""
@@ -36,7 +37,7 @@ class Rectangle:
     def height(self):
         """ retrieves the value for the height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         "sets and checks value for height"
@@ -45,11 +46,11 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """ calculates the value for the area"""
         return (self.__width * self.__height)
-    
+
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return (0)
@@ -73,5 +74,6 @@ class Rectangle:
     def __del__(self):
         """ prints a message for every object that is deleted"""
         print("Bye rectangle...")
-    
+
+
 Rectangle.number -= 1
