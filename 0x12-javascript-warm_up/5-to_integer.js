@@ -1,2 +1,2 @@
 #!/usr/bin/node
-console.log(parseInt(process.argv[2]) ? `My number: ${parseInt(process.argv[2])}` : 'Not an integer');
+console.log(parseInt(process.argv[2]) ? `My number: ${parseInt(process.argv[2])}` : 'Not a number');
