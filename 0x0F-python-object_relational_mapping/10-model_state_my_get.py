@@ -14,7 +14,7 @@ if __name__ == "__main__":
         then fetching from the database
     """
 
-    database_connect = 'mysql+mysql_db://{}:{}@localhost:3306/{}'.format(
+    database_connect = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1], argv[2], argv[3])
 
     engine = create_engine(database_connect)
