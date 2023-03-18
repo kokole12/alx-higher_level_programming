@@ -24,5 +24,9 @@ if __name__ == '__main__':
     session.add(state)
     session.commit()
 
-    for instance in session.query(State).order_by(State.id):
-        print('{}: {}'.format(instance.id, instance.name))
+    state = session.query(State).filter(State.name == argv[4]).first()
+
+    if state is not None:
+        print('{}'.format(state.id))
+    else:
+        print("Not found")
