@@ -16,7 +16,7 @@ if __name__ == '__main__':
         the database
     """
 
-    database_conect = 'mysql+msqldb://{}:{}@localhost:3306/{}'
+    database_conect = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
 
     engine = create_engine(database_conect)
     Session = sessionmaker(bind=engine)
