@@ -24,7 +24,5 @@ if __name__ == '__main__':
     session.add(state)
     session.commit()
 
-    state = session.query(State).filter(State.name == argv[4]).first()
-
     print('{0}'.format(state.id))
     session.close()
