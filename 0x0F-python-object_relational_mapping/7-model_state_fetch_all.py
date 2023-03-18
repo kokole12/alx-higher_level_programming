@@ -15,7 +15,7 @@ if __name__ == '__main__':
     """
 
     database_connect = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-            argv[1], argv[2], arg[3])
+            argv[1], argv[2], argv[3])
 
     engine = create_engine(database_connect)
     Session = sessionmaker(bind=engine)
