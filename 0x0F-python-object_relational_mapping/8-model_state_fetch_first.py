@@ -23,9 +23,7 @@ if __name__ == '__main__':
     session = Session()
 
     State = session.query(State).order_by(State.id).first()
-    for instance in State:
-        if State is not None:
-            print('{}: {}'.format(instance.id, instance.name))
-        else:
-            print("Nothing")
-
+    if State is not None:
+        print('{}: {}'.format(instance.id, instance.name))
+    else:
+        print("Nothing")
