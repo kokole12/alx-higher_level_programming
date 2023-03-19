@@ -3,11 +3,10 @@
     modeling a class for city
 """
 
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, ForeignKey
 from model_state import State, Base
 
-class City:
+class City(Base):
     """
         Initializing the class for city
         Arguments:
