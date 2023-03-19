@@ -20,14 +20,16 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3])
 
     engine = create_engine(db_url)
-    Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
 
+    Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(City, State).join(State)
+    newState = State(name='California')
+    newCity = City(name='San Francisco')
+    newState.cities.append(newCity)
 
-    for city, state in results.all():
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
-
+    session.add(newState)
+    session.add(newCity)
     session.commit()
     session.close()
