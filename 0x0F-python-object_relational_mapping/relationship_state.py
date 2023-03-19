@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
 mydata = MetaData()
-Base = declarative_base()
+Base = declarative_base(metadata=mydata)
 
 
 class State(Base):
