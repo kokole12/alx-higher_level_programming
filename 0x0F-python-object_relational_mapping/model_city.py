@@ -6,6 +6,7 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
 from model_state import State, Base
 
+
 class City(Base):
     """
         Initializing the class for city
