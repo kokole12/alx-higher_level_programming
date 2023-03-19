@@ -23,12 +23,14 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3])
 
     engine = create_engine(database_connection)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
 
     session = Session()
     state = State(name='California')
     city = City(name = 'San Francisco')
     state.cities.append(city)
+
 
     session.add(state)
     session.commit()
