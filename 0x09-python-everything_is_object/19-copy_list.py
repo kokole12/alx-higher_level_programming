@@ -2,7 +2,9 @@
 """
     python script to copy and clone and list
 """
-def copy_list(l):
+
+
+def copy_list(my_list):
     """ Initializing a new list and copying from original list"""
 
-    return(l.copy())
+    return (my_list.copy())
