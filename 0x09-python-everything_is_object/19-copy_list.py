@@ -5,5 +5,4 @@
 def copy_list(l):
     """ Initializing a new list and copying from original list"""
 
-    new_l = l.copy()
-    return new_l
+    return(l.copy())
