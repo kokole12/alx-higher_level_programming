@@ -1,0 +1,3 @@
+#!/bin/bash
+# shell script to return the status code of a reques
+curl -s -w "%{http_code}" "$1"
