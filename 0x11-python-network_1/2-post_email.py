@@ -12,6 +12,6 @@ if __name__ == "__main__":
     url = sys.argv[1]
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
-        body = response.rea()
+        body = response.read()
         body_str = body.decode('utf-8')
         print(body_str)
