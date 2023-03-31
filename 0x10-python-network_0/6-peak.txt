@@ -1,0 +1,11 @@
+The test file for find_peak
+==========================
+
+usage:
+to find the peak value of in a list
+importing the module
+    >>> find_peak = __import('6-peak').find_peak
+
+No testing function on a list
+    >>> find_peak([1, 4, 2, 5, 0])
+    5
