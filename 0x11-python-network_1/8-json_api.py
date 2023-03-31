@@ -2,7 +2,6 @@
 """ sends a requesr with a query paramater"""
 import sys
 import requests
-import json
 
 
 if __name__ == "__main__":
