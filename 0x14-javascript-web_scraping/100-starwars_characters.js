@@ -10,16 +10,16 @@ request.get(url, (error, response, body) => {
   } else {
     const content = JSON.parse(body);
     const characters = content.characters;
-    console.log(characters);
+    // console.log(characters);
     for (const character of characters) {
-        request.get(character, (error, response, body) => {
-            if (error) {
-                console.log(error)
-            } else {
-                console.log(JSON.parse(body))
-            }
-        })
+      request.get(character, (error, response, body) => {
+        if (error) {
+          console.log(error);
+        } else {
+          const names = JSON.parse(body);
+          console.log(names.name);
+        }
+      });
     }
-}
+  }
 });
-
