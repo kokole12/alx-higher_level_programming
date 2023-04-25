@@ -11,12 +11,15 @@ request.get(url, (error, response, body) => {
     const content = JSON.parse(body);
     const characters = content.characters;
     console.log(characters);
-    request.get(characters, (error, response, body) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(JSON.parse(body));
-      }
-    });
-  }
+    for (const character of characters) {
+        request.get(character, (error, response, body) => {
+            if (error) {
+                console.log(error)
+            } else {
+                console.log(JSON.parse(body))
+            }
+        })
+    }
+}
 });
+
